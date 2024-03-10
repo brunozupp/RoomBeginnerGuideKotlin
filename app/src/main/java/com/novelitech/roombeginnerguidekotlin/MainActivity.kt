@@ -31,12 +31,12 @@ class MainActivity : ComponentActivity() {
         ).build()
     }
 
-    // If by viewModel needs parameters I need to use Factory
+    // If the viewModel needs parameters I need to use Factory
     private val viewModel by viewModels<ContactViewModel>(
         factoryProducer = {
             object: ViewModelProvider.Factory {
                 override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                    return ContactViewModel(db.dao) as T
+                    return ContactViewModel(db.contactDao) as T
                 }
             }
         }

@@ -14,5 +14,5 @@ import com.novelitech.roombeginnerguidekotlin.entities.ContactEntity
 abstract class ContactDatabase: RoomDatabase() {
 
     // Since this is abstract the Room will define it for me
-    abstract val dao: ContactDao
+    abstract val contactDao: ContactDao
 }
